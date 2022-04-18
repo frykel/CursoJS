@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Teste 002</title>
+
+<style>
+
+body {
+
+background-color: rgb(116, 199, 120);
+font: normal 15pt Arial;
+
+}
+
+</style>
+
+</head>
+<body>
+    
+<script>
+
+
+var pn1 = window.prompt('Digite o nome do produto 1:')
+var pq1 = Number(window.prompt('Digite a quantidade do produto 1:'))
+var pv1 = Number(window.prompt('Digite o valor do produto 1: '))
+var pn2 = window.prompt('Digite o nome do produto 2:')
+var pq2 = Number(window.prompt('Digite a quantidade do produto 2:'))
+var pv2 = Number(window.prompt('Digite o valor do produto 2: '))
+
+var total1 = pq1 * pv1
+var total2 = pq2 * pv2
+var totalt1 = total1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'} )
+var totalt2 = total2.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'} )
+
+document.write(`Temos ${pq1} unidades de ${pn1} em estoque no valor de ${totalt1} <br><br>`)
+document.write(`Temos ${pq2} unidades de ${pn2} em estoque no valor de ${totalt2} <br><br>`)
+
+
+
+//Esse programa recebe nome, quantidade e valor de 2 produtos e informa o total em estoque
+
+
+</script>
+
+</body>
+</html>

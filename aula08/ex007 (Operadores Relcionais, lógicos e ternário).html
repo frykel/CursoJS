@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+/* Operadores Relacionais 
+> Maior que     5 > 2 True
+< Menor que     7 < 4 False
+>= Maior ou igual que   8 >= 8 True
+<= Menor ou igual que   9 <=7 False
+== Igual    5 == 5 True     5 == '5' True  
+=== Igual Restrito   5 === '5' False     5 === 5 True
+!= Diferente    4!=4 False  4 != '4' False
+!== Desigual Restrito   4 !== '4' True
+
+*/
+
+/* Operadores Lógicos
+
+! Negação (NÃO)
+    !True --> False 
+    !False --> True
+
+&& Conjunção (E) (Os dois tem que ser verdadeiro para True)
+
+    True && True --> True
+    True && True --> False
+    False && True --> False
+    False && False --> False
+
+|| Disjunção (OU) (Basta que 1 seja verdadeira para True)
+
+ True || True --> True
+    True || True --> True
+    False a True --> True
+    False || False --> False
+
+*/
+
+//OBS:. Ordem de operadores: Aritimético > Relacionais > Lógicos
+//OBS 2:. Ordem entre operadores Lógicos: Não(!) > E(&&) > OU(||)
+//OBS 3:. Operadores relacionais não tem ordem, é quem aparece primeiro (esquerda para direita)
+
+/* Operador Ternário:
+
+? Interrogação
+: Dois Pontos
+
+    teste lógico ? true       : false
+Ex1:
+    media = 5
+
+    média >= 7.0 ? "Aprovado" : "Reprovado"   --> Reprovado
+    média >= 4.0 ? "Aprovado" : "Reprovado"   --> Aprovado
+
+Ex2:
+    var x = 8
+    var res = x % 2 == 0 ? 5 : 9    --> res = 5
+    x = 9
+    var res = x % 2 == 1 ? 5 : 9    --> res = 9
+
+*/
+</script>
+
+
+
+
+</body>
+</html>

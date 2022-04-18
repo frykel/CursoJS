@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+
+        font: normal 15pt Arial;
+    }
+
+</style>
+
+</head>
+<body>
+    <script>
+
+var n1 = Number.parseFloat(window.prompt('Digite o valor do produto à prazo'))
+var a1 = n1 - (n1*0.15)
+document.write(`O valor <strong>à vista</strong> é: ${a1}<br>`)
+a1.toFixed(2).replace('.' , ',') 
+//comando toFixed() é usado para definir quantidade de casas decimais desejadas
+document.write(`O valor <strong>à vista</strong> é: ${a1}<br>`)
+//comando replace ( , ) é usado para trocar notação de casa decimal de , para . ou vice-versa
+a1.toLocaleString( 'pt-BR',{style: 'currency', currency: 'BRL'} ) 
+//comando acima é usado para transformar número em unidade de dinheiro
+document.write(`O valor <strong>à vista</strong> é: ${a1}`)
+    </script>
+</body>
+</html>

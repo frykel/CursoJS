@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Notas e Faltas</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+<body>
+    <header>
+        <h1> Registro de Notas e Faltas</h1>
+    </header>
+    <div id = "img"><img src="fotologo.png" alt="fotologo">
+    </div>
+    <section>
+        <div>
+           <p> Nome:<input type="text" name="txtnome" id="txtnome" placeholder="Digite seu nome"></p>
+           <p>Sexo: <input type="radio" name="txtgen" id="masc" checked>
+                    <label for="txtgen">Masculino</label>
+                    <input type="radio" name="txtgen" id="fem">
+                    <label for="textgen">Feminino</label>
+                </p>
+            <p>Número de Faltas: <input type="number" name="txtf" id="txtf" placeholder="Faltas"></p>
+            <p>Número Aulas: <input type="number" name="txtt" id="txtt" placeholder="Aulas"></p>
+            <p>Nota 1: <input type="number" name="txtn1" id="txtn1" placeholder="Nota 1">
+               Nota 2: <input type="number" name="txtn2" id="txtn2" placeholder="Nota 2"></p>
+            <p><input type="button" value="Verificar" id = "button" onclick="calcular()"></p>
+        
+    </section>
+    <br>
+    <section>
+        <div id = "res">
+            Seu resultado foi:
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

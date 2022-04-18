@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 005: Treinando DOM</title>
+    <style>
+        body{
+background-color: darkseagreen;
+font: normal 20pt Arial;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bem-Vindos aos novos exercícios de DOM</h1>
+    <p id="para1">Hoje iremos aprender novos exercícios para praticar o <strong>DOM</strong></p>
+    <p name = "nome">Em aula passada aprendemos algumas ferramentas pra facilitar o estudo</p>
+    <p>elas serão mostradas abaixo: </p>
+    <div>Aprendemos como modificar o texto HTML usando JS</div>
+
+    <script>
+p1 = window.document.getElementById('para1')
+document.write(p1.innerHTML + "<br>")
+p1.style.color = 'red'
+p1.style.background = 'black'
+document.write(p1.innerText)
+p2 = document.getElementsByTagName('p')[1]
+document.write('<br><br>' + p2.innerText + '<br>')
+p3 = document.getElementsByName('nome')[0]
+p3.innerText = "Olá amigo"
+
+    </script>
+</body>
+</html>

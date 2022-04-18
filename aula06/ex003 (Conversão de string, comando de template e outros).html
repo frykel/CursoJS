@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+       body {       /* Modificações de cor no corpo da página */
+            background-color: coral; /* Cor do fundo da página*/
+            color: white;      /* cor da letra da página */              
+
+       } 
+       h1{
+           color: black;
+           font: bold 30pt Arial
+       }
+       p{
+          font: normal 15pt Arial 
+       }
+        
+    </style>
+</head>
+<body>
+    <h1>Novos testes em JavaScript, CSS e HTML</h1> <!--Título do texto-->
+    <p>Novos treinamentos estão sendo feitos em linguagens de programação</p> <!--Parágrafo-->
+    
+    <script>
+    
+       var n1 = Number.parseInt(window.prompt('Digite um número'))
+       var n2 = Number.parseFloat(window.prompt('Digite outro número'))
+       var n3 = Number(window.prompt('Digite um terceiro número'))
+    //o comando window.prompt retorna uma string independente se foi digitado number
+    //Number.parseInt() converte a variável em número inteiro
+    //Number.parseFloat() converte a variável em número com decimais (Real)
+    //Number() pode ser usado atualmente, ele age como a junção dos dois comandos acima (int e float)
+       var soma = n1 + n2
+       var soma2 = n1 + n2 + n3
+
+       //para converter de número para string podemos usar:
+       //String(n) ou n.toString()
+       window.alert('A soma de n1 e n2 é ' + soma.toString())
+       window.alert(`A soma entre ${n1}, ${n2} e ${n3} é ${String(soma2)}`) 
+       //o comando (template string) ${} substitui a necessidade de concatenar com + conforme acima
+       // (number + number) o + serve para adição
+       // (string + string) o + serve para concatenação
+       /* Para formatar Strings podemos usar os comandos abaixo:
+       n1.length --> quantos carecteres a string tem (n1 é a variável)
+       n1.UpperCase() --> Muda para "MAIÚSCULA" (n1 é a variável)
+       n1.LowerCase() --> Muda para "minúscula" (n1 é a variável)
+       */
+    </script>
+</body>
+</html>

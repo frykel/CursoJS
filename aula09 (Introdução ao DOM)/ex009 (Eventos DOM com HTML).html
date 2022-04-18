@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+        font: normal 20pt Arial;
+        background: rgb(108, 206, 108);
+        color white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px; /*alinha texto na horizontal */
+        text-align: center; /* alinha texto na vertical */
+                }
+    </style>
+
+</head>
+
+<body>
+    
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <!--O comando acima cria condições de disparos para eventos DOM
+    através do próprio HTML, isso também é possível usando só JS-->
+        Interajaaaaaa...
+
+    </div>
+    <script>
+        /* Eventos DOM:
+        São eventos que podem ocorrer com os objetos de acordo com a interação do usuário, por exemplo:
+            -passar o mapa cima de determinada área do objeto --> mouseenter
+            -mover o mouse em cima da área do objeto --> mousemove
+            -clicar e segurar com o mouse na área do objeto --> mousedown
+            -soltar o click do mouse que estava segurado --> mouseup
+            -clicar e soltar rapidamente com o mouse --> click
+            -sair da área do objeto com o mouse --> mouseout
+
+            OBS:. site para pesquisar os eventos DOM: https://developer.mozilla.org/pt-BR/docs/Web/Events
+            */
+
+        /* Disparando Eventos DOM --> Funções:
+            -São códigos que vão ser executados quando ocorrerem um evento.
+                function ação(parâmetro){
+                    código
+                }
+                */
+        var a = document.getElementById('area')
+        function clicar(){
+            
+            a.innerText = 'Você Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'yellow'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+                </script>
+</body>
+</html>

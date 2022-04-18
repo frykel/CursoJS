@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+body{
+
+    background-color: rgb(179, 77, 77);
+    color: white;
+    font: normal 18pt Arial;
+}
+
+    </style>
+
+</head>
+<body>
+    <!--Comando CTRL + SHIFT + P para abrir a pesquisa e executar o live server (extensão que executa o programa conforme é modificado)-->
+<h1>Inciando estudos com DOM</h1>
+<p>Aqui vai o resultado</p>
+<p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+<div id="msg">Clique em mim</div>
+
+<script>
+//DOM: Document Object Model
+//DOM não funciona no Node.js, pois ele é para navegador
+/* Árvore do DOM
+    A raiz da árvore DOM dentro do navegador é chamada de "window"
+    Dentro do "window" temos vários objetos: "location", "document", "history", entre outros
+        "document" (Árvore hierarquica do document)
+            "html"
+                "head"
+                    "meta"
+                    "title"
+                "body"
+                    "h1"
+                    "p"
+                        "strong"
+                    "div"
+*/
+window.document.write('<br>Olá Mundo<br>')
+window.document.write(window.document.charset)
+window.document.write('<br><br>')
+window.document.write(window.document.URL)
+window.document.write('<br><br>')
+/* Modos de selecionar o objeto (dentro de document):
+       Por marca (p,h1,div) --> getElementsByTagName()
+       Por ID --> getElementByID()
+       Por nome --> getElementsByName()
+       Por classe --> getElementsByClassName()
+       Por seletor --> querySelector()
+                       querySelectorAll()
+
+        Sempre que o Element estiver no plurarl é necessário usar colchetes para definir qual o elemento 
+            getElementsName('p')[0] por exemplo
+       */
+var p1 = window.document.getElementsByTagName('p')[0]
+//o comando acima está pegando o primeiro parágrafo e armazenando na variável p1
+// o colchete é usado quando se tem mais de um elemento com a mesma tag
+p1.style.color = 'black'
+//o comando acima está mudando a cor do texto armazenado na variável p1
+document.write('Está escrito assim:<br> ' + p1.innerText)
+//o comando acima está escrevendo o texto armazenado em p1
+//se eu usar innetHTML ao invés de innerText ele irá puxar também a formatação do parágrafo
+var corpo = document.body
+corpo.style.background = 'red'
+//o comando acima registrou a variável corpo como o body da página e mudou sua cor de fundo
+var d = document.getElementById('msg')
+//comando acima armazena texto por ID
+d.style.background = 'green'
+//comando acima modifica cor de fundo do texto armazenado
+document.write('<br>' + d.innerText + '<br>')
+//comando acima escreve o texto armazenado
+d.innerText = "Estou aguardando..."
+//comando acima troca o texto armazenado na variável d
+document.write('<br>' + d.innerHTML)
+//comando acima escre o novo texto.
+
+var d1 = window.document.getElementsByName('msg')[0]
+
+var d2 = window.document.querySelector('div#msg')
+//toda div é representado por #, toda classe por .
+d2.style.background = 'blue'
+
+</script>
+
+</body>
+</html>

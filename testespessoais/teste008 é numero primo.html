@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando número primo</title>
+    <style>
+        h1{
+            text-align: center;
+            font: bold 20pt Arial;
+            color: white;
+        }
+        body{
+            background-color: rgb(143, 0, 0);
+            font: bold 15pt Arial;
+            color: white;
+        }
+        p{
+            font: normal 17pt Arial;
+            color: white;
+        }
+        input#txtp{
+            text-align: center;
+            width: 70px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Testando número primo</h1>
+    <div>
+        Digite um número para saber se é primo: <input type="number" name="txtp" id="txtp">
+        <p><input type="button" value="Testar" onclick="primo()">
+      </p>
+        
+    </div>
+    <div id = "res">
+        <p>O número digitado: </p>
+
+    </div>
+
+    <script>
+        function primo(){
+           var n = document.querySelector('input#txtp')
+            //n = 50
+        var res = document.querySelector('div#res')
+        var cont = 0
+        
+           for (var i = n.value; i>0 ; i--){
+            
+                if (n.value%i==0){
+                    cont++
+                   
+                }
+            
+           }
+           if(cont == 2){
+               res.innerHTML += `o número ${n.value} é primo `
+               
+           }else{
+            res.innerHTML += `o número ${n.value} não é primo`
+            
+           }
+           res.innerHTML += '<br>Divisões resto zero: ' + cont + '<br><br>'
+        }
+     
+
+    </script>
+</body>
+</html>

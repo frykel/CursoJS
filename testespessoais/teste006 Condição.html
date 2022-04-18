@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    
+<input type="text" name="nome" id="nome" placeholder="Digite seu nome"><br><br>
+<input type="text" name="origem" id="origem" placeholder="Digite seu país">
+<input type="button" value="Verificar" onclick="origem1()"><br><br>
+<div id="res"></div>
+
+<script>
+    var nome = document.querySelector('input#nome')
+    var origem = document.getElementById('origem')
+    var res = document.getElementById('res')
+
+    function origem1(){
+    res.innerHTML = `Olá, ${nome.value}, você é do(a) <strong>${origem.value}</strong><br><br>`
+    if(origem.value=='Brasil' || origem.value=='brasil'){
+        res.innerHTML +='Logo, você é <strong>Brasileiro</strong>'
+    }else{
+        res.innerHTML +='Logo, você é <strong>Estrangeiro</strong>'
+    }
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

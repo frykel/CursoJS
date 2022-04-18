@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Teste 002</title>
+
+<style>
+
+body {
+
+background-color: rgb(116, 199, 120);
+font: normal 15pt Arial;
+
+}
+
+
+</style>
+
+</head>
+<body>
+    
+<script>
+
+
+var nome = window.prompt('Digite seu nome:')
+var idade = Number(window.prompt('Digite a sua idade:'))
+var dinheiro = Number(window.prompt('Digite seu dinheiro: '))
+var dinheirors = dinheiro.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'} ) 
+var resultado = idade>=18 && dinheiro>=20 ? 'Permitida' : 'Proibida'
+document.write(`${nome}, Como você tem ${idade} anos e ${dinheirors} reais, sua entrada é: ${resultado}.` )
+
+
+
+//Esse programa pega o nome, idade e dinheiro, e diz se a entrada no evento é permitida ou não
+
+
+</script>
+
+</body>
+</html>

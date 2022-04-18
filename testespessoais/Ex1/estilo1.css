@@ -1,0 +1,69 @@
+body {
+
+background: rgb(0, 66, 17);
+font: normal 15pt Arial;
+}
+input#button{
+  margin-top: 20px;
+  margin-left: 200px;
+  width: 100px;
+  height: 30px;
+  font: bold 15pt Arial;
+}
+
+header{
+color: white;
+text-align: center;
+}
+input#textnome{
+  width: 300px;
+  height: 20px;
+}
+input#txtf{
+  width: 70px;
+  text-align: center;
+}
+input#txtt{
+  width: 70px;
+  text-align: center;
+  margin-left: 33px;
+}
+input#txtn1{
+  width: 70px;
+  text-align: center;
+  
+}
+input#txtn2{
+  width: 70px;
+  text-align: center;
+  
+}
+
+section{
+    background: rgb(151, 240, 158);
+    border-radius: 10px; /* raio arredondado da borda */
+    padding: 15px;
+    width: 500px;
+    height: 500 px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgb(219, 255, 59);
+}
+div#msg{
+    text-align: center;
+    padding: 25px;
+}
+div#img{
+  text-align: center;
+}
+footer{
+color: white;
+text-align: center;
+font-style: italic;
+}
+img{
+  border-radius: 60%;
+  width: 120px;
+  height:120px;
+  
+  text-align: center;
+}
